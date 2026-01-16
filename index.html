@@ -1,0 +1,1061 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name | Communications & PR Consultancy</title>
+  <meta name="description" content="Public relations, brand/marketing, media training, social media, communications, events, and presentations." />
+
+  <!-- Optional (recommended): classy editorial serif + clean sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #fbfaf7;
+      --paper:#ffffff;
+      --ink:#151515;
+      --muted:#5f5f5f;
+      --soft:#7a7a7a;
+      --line: rgba(0,0,0,.10);
+      --shadow: 0 20px 60px rgba(10,10,10,.08);
+      --shadow2: 0 10px 30px rgba(10,10,10,.06);
+
+      /* Classic accent options (swap these to match your brand) */
+      --accent:#2b3a67;      /* navy */
+      --accent2:#b88b4a;     /* warm gold */
+      --accent3:#9a2f2f;     /* burgundy (optional) */
+
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1120px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 420px at 20% -10%, rgba(184,139,74,.12), transparent 60%),
+        radial-gradient(900px 420px at 80% 0%, rgba(43,58,103,.10), transparent 60%),
+        linear-gradient(180deg, var(--bg), #f7f4ee 55%, var(--bg));
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max); margin:0 auto; padding:0 22px}
+
+    /* Top strip */
+    .topbar{
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,.75);
+      backdrop-filter: blur(8px);
+    }
+    .topbar .row{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:10px 0;
+      gap:14px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing:.2px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:7px 12px;
+      border:1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.6);
+    }
+    .dot{
+      width:8px; height:8px; border-radius:50%;
+      background: var(--accent2);
+      box-shadow: 0 0 0 3px rgba(184,139,74,.14);
+    }
+    .mini-links{display:flex; gap:12px; flex-wrap:wrap}
+    .mini-links a{opacity:.85}
+    .mini-links a:hover{opacity:1; text-decoration:underline}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(251,250,247,.78);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 240px;
+    }
+    .mark{
+      width:40px; height:40px;
+      border-radius: 14px;
+      background:
+        radial-gradient(18px 18px at 30% 30%, rgba(255,255,255,.8), transparent 60%),
+        linear-gradient(135deg, var(--accent), rgba(43,58,103,.75));
+      box-shadow: 0 16px 30px rgba(43,58,103,.16);
+      border: 1px solid rgba(0,0,0,.06);
+    }
+    .brand h1{
+      margin:0;
+      font-size: 14px;
+      letter-spacing:.4px;
+      line-height:1.1;
+      text-transform: uppercase;
+    }
+    .brand span{
+      display:block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top:3px;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex; gap:16px;
+      padding:0; margin:0;
+      align-items:center;
+    }
+    nav a{
+      font-size: 13.5px;
+      color: var(--muted);
+      padding:10px 12px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: .18s ease;
+      white-space:nowrap;
+    }
+    nav a:hover{
+      color: var(--ink);
+      background: rgba(0,0,0,.03);
+      border-color: rgba(0,0,0,.06);
+    }
+    nav a.active{
+      color: var(--ink);
+      background: rgba(184,139,74,.12);
+      border-color: rgba(184,139,74,.30);
+    }
+
+    .actions{
+      display:flex; align-items:center; gap:10px;
+      min-width: 240px;
+      justify-content:flex-end;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:11px 14px;
+      border-radius: 999px;
+      border:1px solid rgba(0,0,0,.12);
+      background: rgba(255,255,255,.75);
+      color: var(--ink);
+      font-weight: 600;
+      transition: .18s ease;
+      cursor:pointer;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.95)}
+    .btn.primary{
+      border-color: rgba(43,58,103,.35);
+      background: linear-gradient(135deg, rgba(43,58,103,.96), rgba(43,58,103,.78));
+      color:#fff;
+      box-shadow: 0 16px 35px rgba(43,58,103,.20);
+    }
+
+    .hamburger{
+      display:none;
+      width:44px; height:44px;
+      border-radius: 14px;
+      border:1px solid rgba(0,0,0,.12);
+      background: rgba(255,255,255,.75);
+      cursor:pointer;
+    }
+
+    .mobileMenu{
+      display:none;
+      border-top: 1px solid var(--line);
+      padding: 10px 0 16px;
+    }
+    .mobileMenu a{
+      display:block;
+      padding:12px 10px;
+      border-radius: 14px;
+      color: var(--muted);
+      border: 1px solid transparent;
+    }
+    .mobileMenu a:hover{color:var(--ink); background: rgba(0,0,0,.03); border-color: rgba(0,0,0,.06)}
+    .mobileMenu.open{display:block}
+
+    /* Hero */
+    .hero{padding: 44px 0 22px}
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 16px;
+      align-items:stretch;
+    }
+    .heroMain{
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(0,0,0,.10);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+      padding: 34px;
+      min-height: 420px;
+    }
+    .heroRule{
+      height:1px;
+      background: linear-gradient(90deg, transparent, rgba(0,0,0,.18), transparent);
+      margin: 18px 0 18px;
+    }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(184,139,74,.35);
+      background: rgba(184,139,74,.10);
+      color: var(--accent2);
+      font-weight: 700;
+      letter-spacing:.35px;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    .heroTitle{
+      margin: 16px 0 10px;
+      font-family: Fraunces, ui-serif, Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.03;
+      letter-spacing: -0.6px;
+    }
+    .heroTitle em{
+      font-style: normal;
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 6px;
+      text-decoration-color: rgba(184,139,74,.7);
+    }
+    .heroSub{
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+      max-width: 66ch;
+    }
+    .heroBadges{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 16px;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 12px;
+      border-radius: 999px;
+      border:1px solid rgba(0,0,0,.10);
+      background: rgba(0,0,0,.02);
+      color: var(--ink);
+      font-size: 13px;
+    }
+    .badge .miniDot{
+      width:8px; height:8px; border-radius:50%;
+      background: var(--accent2);
+      box-shadow: 0 0 0 3px rgba(184,139,74,.12);
+    }
+
+    .heroSide{
+      display:flex;
+      flex-direction:column;
+      gap: 16px;
+    }
+    .issueCard{
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,.85);
+      border: 1px solid rgba(0,0,0,.10);
+      box-shadow: var(--shadow2);
+      padding: 22px;
+      position:relative;
+    }
+    .issueTop{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .issueLabel{
+      font-weight:700;
+      letter-spacing:.4px;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .issueNo{
+      font-weight:700;
+      color: var(--accent2);
+      font-size: 12px;
+      border:1px solid rgba(184,139,74,.35);
+      background: rgba(184,139,74,.10);
+      padding:6px 10px;
+      border-radius: 999px;
+    }
+    .issueTitle{
+      margin: 14px 0 8px;
+      font-family: Fraunces, ui-serif, Georgia, serif;
+      font-size: 20px;
+      line-height:1.15;
+      letter-spacing:-.2px;
+    }
+    .issueText{
+      margin:0;
+      color: var(--muted);
+      line-height:1.75;
+      font-size: 13.5px;
+    }
+    .issueLink{
+      display:inline-flex;
+      margin-top: 14px;
+      color: var(--accent);
+      font-weight:700;
+      font-size: 13px;
+    }
+    .issueLink:hover{text-decoration:underline}
+
+    section{padding: 34px 0}
+    .sectionHead{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:18px; margin-bottom: 16px;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-family: Fraunces, ui-serif, Georgia, serif;
+      font-size: 22px;
+      letter-spacing:-.2px;
+    }
+    .sectionHead p{
+      margin:0;
+      color: var(--muted);
+      max-width: 72ch;
+      line-height:1.75;
+      font-size: 14px;
+    }
+
+    /* Cards */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+    }
+    .card{
+      border-radius: var(--radius);
+      border: 1px solid rgba(0,0,0,.10);
+      background: rgba(255,255,255,.86);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+    .card:hover{
+      transform: translateY(-3px);
+      border-color: rgba(184,139,74,.35);
+      background: rgba(255,255,255,.95);
+    }
+    .cardInner{padding: 18px}
+    .cardTitle{
+      margin: 2px 0 8px;
+      font-family: Fraunces, ui-serif, Georgia, serif;
+      font-size: 16px;
+      letter-spacing:-.1px;
+    }
+    .cardText{
+      margin:0;
+      color: var(--muted);
+      line-height:1.75;
+      font-size: 13.8px;
+    }
+    .tagRow{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin-top: 12px;
+    }
+    .tag{
+      font-size: 12px;
+      color: var(--soft);
+      border:1px solid rgba(0,0,0,.10);
+      background: rgba(0,0,0,.02);
+      padding:6px 10px;
+      border-radius: 999px;
+    }
+
+    .service{grid-column: span 4; min-height: 170px;}
+    .icon{
+      width:44px; height:44px;
+      border-radius: 16px;
+      display:grid; place-items:center;
+      border:1px solid rgba(0,0,0,.10);
+      background: rgba(0,0,0,.02);
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    .icon svg{width:22px; height:22px; opacity:.95}
+
+    /* Magazine blog layout */
+    .blogWrap{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+      align-items:start;
+    }
+    .feature{
+      min-height: 380px;
+      border-radius: var(--radius2);
+      padding: 22px;
+      border: 1px solid rgba(0,0,0,.10);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.82));
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .feature::before{
+      content:"";
+      position:absolute; inset:-1px;
+      background:
+        radial-gradient(700px 320px at 80% 0%, rgba(184,139,74,.10), transparent 55%),
+        radial-gradient(700px 320px at 10% 90%, rgba(43,58,103,.08), transparent 55%);
+      pointer-events:none;
+    }
+    .featureMeta{
+      display:flex; flex-wrap:wrap; gap:10px;
+      align-items:center;
+      position:relative;
+      z-index:2;
+    }
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 10px;
+      border-radius: 999px;
+      border:1px solid rgba(0,0,0,.10);
+      background: rgba(0,0,0,.02);
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .feature h3{
+      margin: 14px 0 10px;
+      font-family: Fraunces, ui-serif, Georgia, serif;
+      font-size: 30px;
+      line-height:1.05;
+      letter-spacing:-.5px;
+      position:relative;
+      z-index:2;
+    }
+    .feature p{
+      margin:0;
+      color: var(--muted);
+      line-height:1.85;
+      font-size: 14.5px;
+      position:relative;
+      z-index:2;
+      max-width: 72ch;
+    }
+    .feature .btnRow{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 14px;
+      position:relative;
+      z-index:2;
+    }
+
+    .sideList{display:flex; flex-direction:column; gap: 14px;}
+    .post{
+      display:flex;
+      gap: 14px;
+      padding: 14px;
+      border-radius: var(--radius);
+      border:1px solid rgba(0,0,0,.10);
+      background: rgba(255,255,255,.86);
+      box-shadow: var(--shadow2);
+      transition:.18s ease;
+    }
+    .post:hover{transform: translateY(-2px); border-color: rgba(43,58,103,.22)}
+    .thumb{
+      width: 92px; height: 92px;
+      border-radius: 16px;
+      background:
+        radial-gradient(60px 40px at 30% 30%, rgba(184,139,74,.22), transparent 60%),
+        linear-gradient(135deg, rgba(43,58,103,.18), rgba(184,139,74,.14));
+      border:1px solid rgba(0,0,0,.10);
+      flex: 0 0 auto;
+    }
+    .post h4{
+      margin:0;
+      font-size: 14.5px;
+      line-height:1.2;
+      letter-spacing:-.1px;
+    }
+    .post p{
+      margin:6px 0 0;
+      color: var(--muted);
+      font-size: 12.8px;
+      line-height:1.7;
+    }
+    .postMeta{
+      margin-top: 8px;
+      display:flex;
+      gap: 8px;
+      flex-wrap:wrap;
+      color: var(--soft);
+      font-size: 12px;
+    }
+
+    /* CTA */
+    .cta{
+      border-radius: var(--radius2);
+      border:1px solid rgba(0,0,0,.10);
+      background: rgba(255,255,255,.90);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      overflow:hidden;
+      position:relative;
+    }
+    .cta::before{
+      content:"";
+      position:absolute; inset:-1px;
+      background:
+        radial-gradient(700px 320px at 15% 10%, rgba(184,139,74,.10), transparent 55%),
+        radial-gradient(700px 320px at 85% 90%, rgba(43,58,103,.08), transparent 55%);
+      pointer-events:none;
+    }
+    .ctaGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 14px;
+      align-items:center;
+      position:relative;
+      z-index:2;
+    }
+    .cta h3{
+      margin:0 0 6px;
+      font-family: Fraunces, ui-serif, Georgia, serif;
+      font-size: 22px;
+      letter-spacing:-.2px;
+    }
+    .cta p{
+      margin:0;
+      color: var(--muted);
+      line-height:1.8;
+      font-size: 14px;
+    }
+    form{
+      display:flex; gap:10px; justify-content:flex-end; flex-wrap:wrap;
+    }
+    input{
+      width: min(360px, 100%);
+      padding: 12px 14px;
+      border-radius: 999px;
+      border:1px solid rgba(0,0,0,.12);
+      background: rgba(255,255,255,.92);
+      color: var(--ink);
+      outline:none;
+    }
+    input:focus{border-color: rgba(43,58,103,.35); box-shadow: 0 0 0 4px rgba(43,58,103,.10)}
+
+    /* Footer */
+    footer{
+      padding: 34px 0 46px;
+      border-top:1px solid var(--line);
+      background: rgba(255,255,255,.62);
+      margin-top: 26px;
+    }
+    .footerGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+      align-items:start;
+    }
+    .footerGrid p{color: var(--muted); margin: 10px 0 0; line-height:1.8}
+    .footerLinks{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+    }
+    .footerLinks a{
+      padding:8px 12px;
+      border-radius: 999px;
+      border:1px solid rgba(0,0,0,.10);
+      background: rgba(255,255,255,.86);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .footerLinks a:hover{color:var(--ink); border-color: rgba(184,139,74,.35)}
+
+    /* reveal */
+    .reveal{opacity:0; transform: translateY(10px); transition: .6s ease}
+    .reveal.on{opacity:1; transform:none}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns: 1fr;}
+      .blogWrap{grid-template-columns: 1fr;}
+      .ctaGrid{grid-template-columns: 1fr;}
+      form{justify-content:flex-start}
+      .service{grid-column: span 6}
+      nav ul{display:none}
+      .hamburger{display:inline-flex; align-items:center; justify-content:center}
+    }
+    @media (max-width: 640px){
+      .heroMain{padding: 26px}
+      .service{grid-column: span 12}
+      .footerGrid{grid-template-columns: 1fr}
+      .footerLinks{justify-content:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div class="row">
+        <div class="pill">
+          <span class="dot"></span>
+          <span><strong>Consultancy</strong> • PR • Brand • Media • Communications</span>
+        </div>
+        <div class="mini-links">
+          <a href="#services">Services</a>
+          <a href="#insights">Insights</a>
+          <a href="#contact">Book a Call</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Home">
+          <div class="mark" aria-hidden="true"></div>
+          <div>
+            <h1>Your Name</h1>
+            <span>Public Relations • Brand/Marketing • Media Training</span>
+          </div>
+        </a>
+
+        <nav aria-label="Primary">
+          <ul>
+            <li><a class="active" href="#top">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="actions">
+          <a class="btn" href="#insights">Read the Blog</a>
+          <a class="btn primary" href="#contact">Book a Call</a>
+          <button class="hamburger" id="hamburger" aria-label="Open Menu">☰</button>
+        </div>
+      </div>
+
+      <div class="mobileMenu" id="mobileMenu" aria-label="Mobile">
+        <a href="#services">Services</a>
+        <a href="#insights">Insights</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="heroGrid">
+          <div class="heroMain reveal">
+            <div class="kicker">An editorial approach to modern communications</div>
+
+            <h2 class="heroTitle">
+              Clear messaging. Calm confidence. <em>Results</em> you can measure.
+            </h2>
+
+            <p class="heroSub">
+              I support individuals and organizations through public relations, brand/marketing,
+              media training, social media, communications, events, and presentations—so you show up
+              consistently, credibly, and with polish.
+            </p>
+
+            <div class="heroRule"></div>
+
+            <div class="heroBadges">
+              <div class="badge"><span class="miniDot"></span> Public Relations</div>
+              <div class="badge"><span class="miniDot"></span> Brand / Marketing</div>
+              <div class="badge"><span class="miniDot"></span> Media Training</div>
+              <div class="badge"><span class="miniDot"></span> Social Media</div>
+              <div class="badge"><span class="miniDot"></span> Communications</div>
+              <div class="badge"><span class="miniDot"></span> Events</div>
+              <div class="badge"><span class="miniDot"></span> Presentations</div>
+            </div>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;">
+              <a class="btn primary" href="#contact">Book a Consultation</a>
+              <a class="btn" href="#services">View Services</a>
+            </div>
+          </div>
+
+          <div class="heroSide">
+            <div class="issueCard reveal">
+              <div class="issueTop">
+                <div class="issueLabel">Featured Insight</div>
+                <div class="issueNo">Issue 01</div>
+              </div>
+              <h3 class="issueTitle">A simple framework to refine your message in one afternoon.</h3>
+              <p class="issueText">A clear, repeatable method you can use for PR, brand, and social content.</p>
+              <a class="issueLink" href="#insights">Read the article →</a>
+            </div>
+
+            <div class="issueCard reveal">
+              <div class="issueTop">
+                <div class="issueLabel">Now Booking</div>
+                <div class="issueNo">Q1</div>
+              </div>
+              <h3 class="issueTitle">Media Training Intensives</h3>
+              <p class="issueText">Interview prep, key messages, and on-camera confidence for high-stakes moments.</p>
+              <a class="issueLink" href="#contact">Inquire →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <h2>Services</h2>
+            <p>Choose one area, or combine services into a full communications package.</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card service reveal">
+            <div class="cardInner">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 11.5c5.5-5 10.5-5 16 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M6 13.5c4-3.5 8-3.5 12 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M8 15.5c2.5-2 5.5-2 8 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M12 19.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="cardTitle">Public Relations</h3>
+              <p class="cardText">Story angles, pitching, launch support, press materials, and reputation strategy.</p>
+              <div class="tagRow">
+                <span class="tag">Pitching</span><span class="tag">Press Kit</span><span class="tag">Launches</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card service reveal">
+            <div class="cardInner">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="1.6" />
+                  <path d="M5 9V5h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M19 15v4h-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="cardTitle">Brand / Marketing</h3>
+              <p class="cardText">Positioning, messaging, campaigns, and content that looks premium and converts.</p>
+              <div class="tagRow">
+                <span class="tag">Positioning</span><span class="tag">Campaigns</span><span class="tag">Messaging</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card service reveal">
+            <div class="cardInner">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 7h16v10H4z" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M8 17v3h8v-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M10 10l5 2-5 2v-4z" fill="currentColor" opacity=".9"/>
+                </svg>
+              </div>
+              <h3 class="cardTitle">Media Training</h3>
+              <p class="cardText">Interview prep, message maps, bridging techniques, and confident delivery.</p>
+              <div class="tagRow">
+                <span class="tag">Message Maps</span><span class="tag">Practice</span><span class="tag">Confidence</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card service reveal">
+            <div class="cardInner">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M7 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M16 8.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                  <path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8Z" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+              </div>
+              <h3 class="cardTitle">Social Media</h3>
+              <p class="cardText">Editorial calendars, content pillars, brand voice, and sustainable output.</p>
+              <div class="tagRow">
+                <span class="tag">Strategy</span><span class="tag">Content</span><span class="tag">Reels</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card service reveal">
+            <div class="cardInner">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 6h16v10H7l-3 3V6Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                  <path d="M7 9h10M7 12h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="cardTitle">Communications</h3>
+              <p class="cardText">Internal comms, stakeholder messages, announcements, and narrative alignment.</p>
+              <div class="tagRow">
+                <span class="tag">Internal</span><span class="tag">Stakeholders</span><span class="tag">Narrative</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card service reveal">
+            <div class="cardInner">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M7 4v3M17 4v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M5 7h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M7 12h10M7 16h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="cardTitle">Events & Presentations</h3>
+              <p class="cardText">Run-of-show, speaker coaching, decks, scripts, and high-impact delivery.</p>
+              <div class="tagRow">
+                <span class="tag">Keynotes</span><span class="tag">Decks</span><span class="tag">Events</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSIGHTS -->
+    <section id="insights">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <h2>Insights</h2>
+            <p>Short, useful reads you can publish under categories like PR, Brand, Media Training, Social, and more.</p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn" data-filter="all" type="button">All</button>
+            <button class="btn" data-filter="pr" type="button">PR</button>
+            <button class="btn" data-filter="brand" type="button">Brand</button>
+            <button class="btn" data-filter="media" type="button">Media</button>
+            <button class="btn" data-filter="social" type="button">Social</button>
+            <button class="btn" data-filter="comms" type="button">Comms</button>
+            <button class="btn" data-filter="events" type="button">Events</button>
+            <button class="btn" data-filter="presentations" type="button">Presentations</button>
+          </div>
+        </div>
+
+        <div class="blogWrap">
+          <article class="feature reveal" data-topic="brand">
+            <div class="featureMeta">
+              <span class="chip">Featured</span>
+              <span class="chip">Brand / Marketing</span>
+              <span class="chip">6 min read</span>
+            </div>
+            <h3>The 7-sentence framework for crisp, credible messaging.</h3>
+            <p>
+              A simple template that clarifies what you do, who you help, why it matters, and what makes you distinct—
+              then turns that into PR angles, social captions, and website copy.
+            </p>
+            <div class="btnRow">
+              <a class="btn primary" href="#contact">Work with me</a>
+              <a class="btn" href="#" onclick="alert('Template link — connect this to your blog post page!'); return false;">Read article</a>
+            </div>
+          </article>
+
+          <aside class="sideList">
+            <a class="post reveal" href="#" data-topic="pr" onclick="alert('Template post. Replace with real post URL.'); return false;">
+              <div class="thumb" aria-hidden="true"></div>
+              <div>
+                <h4>PR: How to pitch without sounding like a press release</h4>
+                <p>Turn your story into a real angle: relevance, tension, and proof.</p>
+                <div class="postMeta"><span>PR</span> • <span>4 min</span> • <span>New</span></div>
+              </div>
+            </a>
+
+            <a class="post reveal" href="#" data-topic="media" onclick="alert('Template post. Replace with real post URL.'); return false;">
+              <div class="thumb" aria-hidden="true"></div>
+              <div>
+                <h4>Media: The 3-bridge method for tough questions</h4>
+                <p>Respond clearly, pivot with intention, land your message.</p>
+                <div class="postMeta"><span>Media</span> • <span>5 min</span></div>
+              </div>
+            </a>
+
+            <a class="post reveal" href="#" data-topic="social" onclick="alert('Template post. Replace with real post URL.'); return false;">
+              <div class="thumb" aria-hidden="true"></div>
+              <div>
+                <h4>Social: An editorial calendar that doesn’t collapse</h4>
+                <p>A low-friction system that keeps content consistent.</p>
+                <div class="postMeta"><span>Social</span> • <span>6 min</span></div>
+              </div>
+            </a>
+
+            <a class="post reveal" href="#" data-topic="events" onclick="alert('Template post. Replace with real post URL.'); return false;">
+              <div class="thumb" aria-hidden="true"></div>
+              <div>
+                <h4>Events: A run-of-show checklist for polished launches</h4>
+                <p>What separates “nice event” from “professional experience”.</p>
+                <div class="postMeta"><span>Events</span> • <span>4 min</span></div>
+              </div>
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <h2>About</h2>
+            <p>Keep this short and confident—like an editor’s note.</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card reveal" style="grid-column: span 7;">
+            <div class="cardInner">
+              <h3 class="cardTitle">Communications that feel calm, clear, and premium.</h3>
+              <p class="cardText" style="font-size:14.5px;">
+                I partner with founders, executives, and teams who want messaging that’s consistent across PR, marketing,
+                and social—plus confident delivery for interviews, events, and presentations.
+              </p>
+              <div class="tagRow">
+                <span class="tag">Editorial clarity</span>
+                <span class="tag">High polish</span>
+                <span class="tag">Practical execution</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal" style="grid-column: span 5;">
+            <div class="cardInner">
+              <h3 class="cardTitle">Ways to work together</h3>
+              <p class="cardText">Pick one service or build a full communications package.</p>
+              <div style="margin-top:12px; display:grid; gap:10px;">
+                <div class="pill"><span class="dot"></span><span><strong>Messaging Sprint</strong> (1–2 weeks)</span></div>
+                <div class="pill"><span class="dot"></span><span><strong>Media Training Intensive</strong> (half/full day)</span></div>
+                <div class="pill"><span class="dot"></span><span><strong>Launch Support</strong> (PR + social + assets)</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="ctaGrid">
+            <div>
+              <h3>Ready to build your presence?</h3>
+              <p>
+                Add a short note about what you need help with (PR, brand, media training, social, comms, events, or presentations).
+                I’ll reply with next steps.
+              </p>
+            </div>
+
+            <form onsubmit="event.preventDefault(); alert('Template form — connect this to your email or booking tool.');">
+              <input type="email" placeholder="Your email" required />
+              <button class="btn primary" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footerGrid">
+        <div>
+          <div class="brand">
+            <div class="mark" aria-hidden="true"></div>
+            <div>
+              <h1 style="margin:0; font-size:14px;">Your Name</h1>
+              <span>PR • Brand • Media Training • Social • Comms</span>
+            </div>
+          </div>
+          <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+        </div>
+
+        <div class="footerLinks">
+          <a href="#services">Services</a>
+          <a href="#insights">Insights</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const burger = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    burger?.addEventListener('click', () => {
+      menu.classList.toggle('open');
+      burger.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true' : 'false');
+    });
+
+    // Reveal on scroll
+    const revealEls = [...document.querySelectorAll('.reveal')];
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+
+    // Filtering
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const posts = document.querySelectorAll('[data-topic]');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-filter');
+        filterButtons.forEach(b => b.classList.remove('primary'));
+        btn.classList.add('primary');
+        posts.forEach(p => {
+          const t = p.getAttribute('data-topic');
+          p.style.display = (key === 'all' || t === key) ? '' : 'none';
+        });
+      });
+    });
+
+    // Active nav on scroll
+    const sections = ['top','services','insights','about','contact']
+      .map(id => document.getElementById(id)).filter(Boolean);
+    const navLinks = Array.from(document.querySelectorAll('nav a'));
+    const navIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const id = e.target.id || 'top';
+        navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      });
+    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0.01 });
+    sections.forEach(s => navIO.observe(s));
+  </script>
+</body>
+</html>
